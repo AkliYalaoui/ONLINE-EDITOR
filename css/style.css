@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.view-option{
+  background-color: #222;
+  display: flex;
+  justify-content: end;
+  padding-right: 20px;
+}
+.view-option button{
+  background-color: #263238;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  margin: 5px;
+  font-size: 1.15rem;
+}
+
+/*
+  PAYSAGE MODE
+*/
+.paysage{
+  display: flex;
+  flex-direction: column;
+}
+.container-editor{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #444;
+  padding: 10px;
+}
+.editor{
+  padding: 5px;
+  flex-grow: 1;
+}
+.paysage .editor.minimize{
+  flex-grow: 0;
+}
+.paysage .editor.minimize .CodeMirror-scroll{
+  overflow: hidden !important;
+  position: absolute;
+}
+.description{
+  background-color: #222;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.description span{
+  color: #fff;
+  font-size: 1.1rem;
+}
+.description button{
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 1rem;
+}
+#iframe{
+  min-height: 500px;
+}
+
+/*
+  LANDSCAPE MODE
+*/
+.landscape{
+  display: flex;
+  flex-direction: row;
+}
+.landscape .container-editor{
+  flex-direction: column;
+  min-height: 100vh;
+}
+.landscape .container-editor .editor{
+  min-width: 300px;
+}
+.landscape .editor.minimize .CodeMirror{
+  height: 50px;
+  max-width: 50vw !important;
+  overflow-wrap: break-word;
+}
+.landscape .editor.minimize .CodeMirror-scroll{
+  position: relative;
+}

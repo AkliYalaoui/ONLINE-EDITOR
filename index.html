@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;/&gt;Code&lt;/&gt;</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="lib/material.css">
+  <link rel="stylesheet" href="lib/codemirror.css">
+  <link rel="stylesheet" href="lib/dracula.css">
+</head>
+<body>
+
+  <div class="view-option">
+    <button data-class="landscape">Landscape</button>
+    <button data-class="paysage">Paysage</button>
+  </div>
+  <div id="view" class="paysage">
+    <div class="container-editor">
+      <div class="editor">
+        <div class="description">
+          <span>HTML</span>
+          <button> <i class="far fa-window-minimize"></i> </button>
+        </div>
+        <textarea id="html"></textarea>
+      </div>
+      <div class="editor">
+        <div class="description">
+          <span>CSS</span>
+          <button> <i class="far fa-window-minimize"></i> </button>
+        </div>
+        <textarea id="css"></textarea>
+      </div>
+      <div class="editor">
+        <div class="description">
+          <span>JS</span>
+          <button> <i class="far fa-window-minimize"></i> </button>
+        </div>
+        <textarea id="js"></textarea>
+      </div>
+    </div>
+
+    <iframe id="editor" frameborder="0" width="100%">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+  </div>
+  <script src="lib/codemirror.js"></script>
+  <script src="mode/javascript/javascript.js"></script>
+  <script src="mode/css/css.js"></script>
+  <script src="mode/xml/xml.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
